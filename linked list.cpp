@@ -45,16 +45,24 @@ class Linkedlist {
         }
         head = n;
     }
+
+    int* pop_front(){
+
+        
+    }
    
 
 };
 
 int main(){
-
-    Linkedlist l;
-    for(int i = 0; i < 20; i++){
+    {
+        Linkedlist l;
+        for(int i = 0; i < 20; i++){
         l.push_front(i);
+        }
     }
+
+    cout << "end" <<endl;
 
     return 0;
 }
