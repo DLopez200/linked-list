@@ -46,9 +46,20 @@ class Linkedlist {
         head = n;
     }
 
-    int* pop_front(){
+    int pop_front(){
+        if(head !=nullptr){
+        int result = head->elem;
+        node* old_head = head;
+        head = head->next;
 
-        
+        old_head->next = nullptr;
+        delete old_head;
+
+        return result;
+        }
+        cout <<"Error: cannot pop from empty list" << endl;
+        return -1;
+
     }
    
 
@@ -59,6 +70,10 @@ int main(){
         Linkedlist l;
         for(int i = 0; i < 20; i++){
         l.push_front(i);
+        }
+
+        for(int i = 0; i < 20; i++){
+            cout << l.pop_front()<< endl;
         }
     }
 
